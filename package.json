@@ -1,0 +1,24 @@
+{
+  "name": "prac-typeORM",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woni-d/prac-typeORM.git"
+  },
+  "keywords": [],
+  "author": "Woni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woni-d/prac-typeORM/issues"
+  },
+  "homepage": "https://github.com/woni-d/prac-typeORM#readme",
+  "dependencies": {
+    "typeorm": "^0.2.32"
+  }
+}
