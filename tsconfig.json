@@ -10,7 +10,10 @@
         ],
         "sourceMap": true,
         "strict": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strictNullChecks": false
     },
     "exclude": [
         "node_modules"
