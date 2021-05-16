@@ -14,6 +14,9 @@ export default class Account {
     @Column({ type: 'varchar', length: 15 })
     username: string;
 
+    @Column({ type: 'varchar', length: 20 })
+    nickname: string;
+
     @Column({ type: 'text', nullable: true, name: 'profile_url' })
     profileUrl: string;
 
@@ -47,6 +50,6 @@ export default class Account {
     @Column({ type: 'varbinary', length: 16, name: 'create_ip' })
     createIp: string;
 
-    @Column()
+    @Column({ default: true })
     active: boolean;
 }

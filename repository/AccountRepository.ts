@@ -10,6 +10,7 @@ export default class AccountRepository extends Repository<Account> {
         account.email = 'kyw017763@naver.com';
         account.password = bcryptjs.hashSync('123123');
         account.username = '김예원';
+        account.nickname = 'Yewon Kim';
         account.type = 'local';
         account.notificationOpen = true;
         account.notificationOpenDate = new Date();
@@ -17,7 +18,6 @@ export default class AccountRepository extends Repository<Account> {
         account.emailOpenDate = new Date();
         account.lastUpdateIp = '';
         account.createIp = '';
-        account.active = true;
 
         return this.createQueryBuilder('account')
             .insert()

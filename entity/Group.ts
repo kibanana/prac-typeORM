@@ -65,7 +65,7 @@ export default class Group {
     @Column({ nullable: true, name: 'penalty_payment_combo_limit' })
     penaltyPaymentComboLimit: number;
 
-    @Column()
+    @Column({ default: true })
     active: boolean;
 
     @Column({ nullable: true, name: 'last_inactivate_date' })

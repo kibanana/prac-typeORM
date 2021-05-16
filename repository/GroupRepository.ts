@@ -15,7 +15,6 @@ export default class GroupRepository extends Repository<Group> {
         group.totalCoin = 0;
         group.awardStandard = 10000;
         group.penaltyStandard = 1000;
-        group.active = true;
         
         return this.createQueryBuilder('account')
             .insert()
