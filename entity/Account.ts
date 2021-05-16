@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn,UpdateDateColumn,  PrimaryGeneratedColumn, Entity } from 'typeorm';
+import { Column, CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn, Entity } from 'typeorm';
 
 @Entity('account')
 export default class Account {
@@ -14,7 +14,7 @@ export default class Account {
     @Column({ type: 'varchar', length: 15 })
     username: string;
 
-    @Column({ type: 'varchar', length: 255, nullable: true, name: 'profile_url' })
+    @Column({ type: 'text', nullable: true, name: 'profile_url' })
     profileUrl: string;
 
     @Column({ type: 'varchar', length: 255, nullable: true })
