@@ -13,7 +13,7 @@ export default class Award {
     @Column({ type: 'varchar', length: 30 })
     type: string;
 
-    @Column({ type: 'varchar', length: 20 })
+    @Column({ type: 'varchar', length: 40 })
     title: string;
 
     @Column({ type: 'varchar', length: 255 })
