@@ -16,7 +16,7 @@ export default class Housework {
     @Column({ type: 'varchar', length: 255 })
     description: string;
 
-    @Column({ type: 'tinyint', length: 2 })
+    @Column({ type: 'tinyint' })
     level: number;
 
     @Column({ type: 'int' })

@@ -1,7 +1,7 @@
 import { ConnectionOptions } from 'typeorm';
-import Account from './entity/Account';
-import AlternativePayment from './entity/AlternativePayment';
-import Group from './entity/Group';
+import Account from './src/entity/Account';
+import AlternativePayment from './src/entity/AlternativePayment';
+import Group from './src/entity/Group';
 
 const connectionOptions: ConnectionOptions = {
   "type": "mysql",

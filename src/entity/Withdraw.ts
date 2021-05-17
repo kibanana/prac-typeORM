@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn, Entity } from 'typeorm';
 
-@Entity('account')
+@Entity('withdraw')
 export default class Withdraw {
     @PrimaryGeneratedColumn('uuid')
     id: string;
