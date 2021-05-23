@@ -16,10 +16,10 @@ export default class Routine {
     @Column({ type: 'varchar', length: 40, name: 'share_method' })
     shareMethod: string;
 
-    @Column({ type: 'tinyint', name: 'start_day_last_value' })
+    @Column({ nullable: true, type: 'tinyint', name: 'start_day_last_value' })
     startDayLastValue: number;
 
-    @Column({ type: 'varchar', length: 40, name: 'share_method_last_value' })
+    @Column({ nullable: true, type: 'varchar', length: 40, name: 'share_method_last_value' })
     shareMethodLastValue: string;
 
     @UpdateDateColumn({ name: 'update_date' })

@@ -25,8 +25,11 @@ export default class AwardLog {
     @JoinColumn({ name: 'award_id' })
     awardId: string;
 
-    @Column({ name: 'is_complete' })
-    isComplete: boolean;
+    @Column({ default: false, name: 'is_receive' })
+    isReceive: boolean;
+
+    @Column({ nullable: true, name: 'receive_date' })
+    receiveDate: Date;
 
     @CreateDateColumn({ name: 'create_date' })
     createDate: Date;

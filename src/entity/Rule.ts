@@ -13,7 +13,7 @@ export default class Rule {
     @Column({ type: 'varchar', length: 255 })
     content: string;
 
-    @Column({ name: 'is_confirm' })
+    @Column({ default: false, name: 'is_confirm' })
     isConfirm: boolean;
 
     @UpdateDateColumn({ name: 'update_date' })
@@ -21,4 +21,7 @@ export default class Rule {
 
     @CreateDateColumn({ name: 'create_date' })
     createDate: Date;
+
+    @Column({ default: true })
+    active: boolean;
 }

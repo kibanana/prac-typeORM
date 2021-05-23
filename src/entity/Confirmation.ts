@@ -1,36 +1,30 @@
 import { Column, CreateDateColumn, PrimaryGeneratedColumn, Entity, ManyToOne, JoinColumn } from 'typeorm';
-import Group from './Group';
+import GroupMember from './GroupMember';
 
 @Entity('confirmation')
 export default class Confirmation {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @ManyToOne(type => Group, group => group.id)
-    @JoinColumn({ name: 'group_id' })
-    groupId: string;
+    @ManyToOne(type => GroupMember, groupMember => groupMember.id)
+    @JoinColumn({ name: 'group_member_id' })
+    groupMemberId: string;
 
     @Column({ type: 'varchar', length: 30 })
     type: string;
 
-    @Column({ type: 'varchar', length: 20 })
-    title: string;
+    @Column({ default: false })
+    isConfirm: boolean;
 
-    @Column({ type: 'varchar', length: 255 })
-    description: string;
+    @Column({ default: false })
+    isRefuse: boolean;
 
-    @Column({ type: 'bigint', nullable: true, name: 'default_award_id' })
-    defaultAwardId: number;
+    @Column({ nullable: true, type: 'varchar', length: 255 })
+    refuseReason: string
+    
+    @Column({ nullable: true,  name: 'confirm_date' })
+    confirmDate: Date;
 
     @CreateDateColumn({ name: 'create_date' })
     createDate: Date;
-
-    @Column({ default: true })
-    active: boolean;
-
-    @Column({ type: 'varchar', length: 20, nullable: true, name: 'input_title' })
-    inputTitle: string;
-
-    @Column({ type: 'varchar', length: 255, nullable: true, name: 'input_content' })
-    inputContent: string;
 }

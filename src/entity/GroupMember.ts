@@ -1,5 +1,7 @@
 import { Column, CreateDateColumn, PrimaryGeneratedColumn, Entity, ManyToOne, JoinColumn, OneToOne } from 'typeorm';
 import Group from './Group';
+import Award from './Award';
+import Penalty from './Penalty';
 
 @Entity('group_member')
 export default class GroupMember {
@@ -10,13 +12,13 @@ export default class GroupMember {
     @JoinColumn({ name: 'group_id' })
     groupId: string;
 
-    // @OneToOne(type => Award, award => award.id)
-    // @JoinColumn({ name: 'select_award_id' })
-    // selectAwardId: string;
+    @OneToOne(type => Award, award => award.id)
+    @JoinColumn({ name: 'select_award_id' })
+    selectAwardId: string;
 
-    // @OneToOne(type => Penalty, penalty => penalty.id)
-    // @JoinColumn({ name: 'select_penalty_id' })
-    // selectPernaltyId: string;
+    @OneToOne(type => Penalty, penalty => penalty.id)
+    @JoinColumn({ name: 'select_penalty_id' })
+    selectPernaltyId: string;
 
     @Column({ type: 'varchar', length: 20 })
     nickname: string;

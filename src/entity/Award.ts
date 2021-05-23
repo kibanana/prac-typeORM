@@ -19,7 +19,7 @@ export default class Award {
     @Column({ type: 'varchar', length: 255 })
     description: string;
 
-    @Column({ type: 'bigint', nullable: true, name: 'default_award_id' })
+    @Column({ nullable: true, type: 'bigint', name: 'default_award_id' })
     defaultAwardId: number;
 
     @CreateDateColumn({ name: 'create_date' })

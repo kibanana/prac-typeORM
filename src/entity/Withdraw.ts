@@ -8,17 +8,17 @@ export default class Withdraw {
     @Column({ unique: true, type: 'varchar', length: 255 })
     email: string;
 
-    @Column({ type: 'varchar', length: 100 })
+    @Column({ type: 'varchar', length: 50 })
     password: string;
 
-    @Column({ type: 'varchar', length: 15 })
-    username: string;
+    @Column({ type: 'varchar', length: 255 })
+    name: string;
 
     @Column({ type: 'varchar', length: 20 })
     nickname: string;
 
-    @Column({ type: 'text', nullable: true, name: 'profile_url' })
-    profileUrl: string;
+    @Column({ type: 'text', nullable: true, name: 'profile_image_url' })
+    profileImageUrl: string;
 
     @Column({ type: 'varchar', length: 255, nullable: true })
     profile: string;

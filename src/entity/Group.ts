@@ -14,8 +14,8 @@ export default class Group {
     @Column({ name: 'is_fluid' })
     isFluid: boolean;
 
-    @Column({ type: 'text', nullable: true, name: 'logo_url' })
-    logoUrl: string;
+    @Column({ type: 'text', nullable: true, name: 'logo_image_url' })
+    logoImageUrl: string;
 
     @Column({ name: 'manager_permission_active' })
     managerPermissionActive: boolean;
@@ -26,8 +26,8 @@ export default class Group {
     @Column({ nullable: true, name: 'bank_account_number' })
     bankAccountNumber: number;
 
-    @Column({ name: 'use_alternative_payment' })
-    useAlternativePayment: boolean;
+    @Column({ name: 'alternative_payment_active' })
+    alternativePaymentActive: boolean;
 
     @Column({ name: 'payment_active' })
     paymentActive: boolean;
@@ -46,6 +46,9 @@ export default class Group {
 
     @Column({ nullable: true, name: 'penalty_money' })
     penaltyMoney: number;
+
+    @Column({ name: 'payment_combo_active' })
+    paymentComboActive: boolean;
 
     @Column({ nullable: true, name: 'award_payment_combo' })
     awardPaymentCombo: number;

@@ -19,8 +19,8 @@ export default class Penalty {
     @Column({ type: 'varchar', length: 255 })
     description: string;
 
-    @Column({ type: 'bigint', name: 'default_award_id' })
-    defaultAwardId: number;
+    @Column({ nullable: true, type: 'bigint', name: 'default_penalty_id' })
+    defaultPenaltyId: number;
 
     @CreateDateColumn({ name: 'create_date' })
     createDate: Date;

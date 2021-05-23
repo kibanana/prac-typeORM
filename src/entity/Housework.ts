@@ -17,7 +17,7 @@ export default class Housework {
     description: string;
 
     @Column({ type: 'tinyint' })
-    level: number;
+    deployCount: number;
 
     @Column({ type: 'int' })
     frequency: string;
