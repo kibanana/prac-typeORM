@@ -1,7 +1,5 @@
 import { ConnectionOptions } from 'typeorm';
-import Account from './src/entity/Account';
-import AlternativePayment from './src/entity/AlternativePayment';
-import Group from './src/entity/Group';
+import entity from './src/entity';
 
 const connectionOptions: ConnectionOptions = {
   "type": "mysql",
@@ -13,9 +11,7 @@ const connectionOptions: ConnectionOptions = {
   "synchronize": true,
   "logging": true,
   "entities": [
-    Account,
-    AlternativePayment,
-    Group,
+    ...entity,
     "src/entity/*.ts"
   ],
   "subscribers": [
